@@ -1,0 +1,99 @@
+/* The <ul> tag defines an unordered (bulleted) list */
+.heading4 {font-style: oblique;}
+.heading {color: red; text-align: center;}
+ul {
+    /* Remove list bullets */
+    list-style-type: none;
+    
+    /* The CSS margin properties are used to create space around elements, outside of any defined borders */
+    margin: 0;
+    
+    /* The CSS padding properties are used to generate space around an element's content, inside of any defined borders. */
+    padding: 0;
+    
+    /* The overflow property specifies what should happen if content overflows an element's box. */
+    overflow: hidden;
+    
+    /*  */
+    background-color: rgb(255, 0, 0, 0.3);
+}
+/* The <li> tag is used inside ordered lists(<ol>), unordered lists (<ul>), and in menu lists (<menu>). */
+li {
+    /* The float property is used for positioning and formatting content e.g. let an image float left to the text in a container. */
+    float: left;
+}
+/* The <a> tag defines a hyperlink, which is used to link from one page to another. */
+li a {
+    /* The display property specifies the display behavior (the type of rendering box) of an element. */
+    display: block;
+    
+    /*  */
+    color: white;
+    
+    /* The text-align property specifies the horizontal alignment of text in an element. */
+    text-align: center;
+    
+    /* The CSS padding properties are used to generate space around an element's content, inside of any defined borders. */
+    padding: 14px 16px;
+    
+    /* The text-decoration property specifies the decoration added to text */
+    text-decoration: none;
+}
+/* The :hover selector is used to select elements when you mouse over them. */
+li a:hover {
+    /*  */
+    background-color: rgba(214, 68, 68, 0.7);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 110%;
+}
+
+li a .active {
+    /*  */
+    background-color: #111;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1; 
+    margin: 90px;
+    justify-content: center;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+
+  .flip-card-back {
+    background-color: black;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
