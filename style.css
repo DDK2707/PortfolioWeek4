@@ -1,6 +1,8 @@
 /* The <ul> tag defines an unordered (bulleted) list */
 .heading4 {font-style: oblique;}
+
 .heading {color: red; text-align: center;}
+
 ul {
     /* Remove list bullets */
     list-style-type: none;
@@ -54,16 +56,16 @@ li a .active {
 
 .flex-container {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row wrap;;
 }
 
 .flip-card {
     background-color: transparent;
     width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1; 
+    height: 300px;
     margin: 90px;
     justify-content: center;
+    border: 1px solid white;
 }
 
 .flip-card-inner {
@@ -92,8 +94,12 @@ li a .active {
   }
 
   .flip-card-back {
-    background-color: black;
-    color: white;
+    background-color: red;
+    color: black;
     transform: rotateY(180deg);
   }
+
+.testimage {
+  width: 300px; height: 300px;
+}
 
