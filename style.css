@@ -1,57 +1,81 @@
-/* The <ul> tag defines an unordered (bulleted) list */
-.heading4 {font-style: oblique;}
+* {
+  box-sizing: border-box;
+}
+.heading4 {font-style: oblique; color: white;}
 
 .heading {color: red; text-align: center;}
 
-ul {
-    /* Remove list bullets */
-    list-style-type: none;
-    
-    /* The CSS margin properties are used to create space around elements, outside of any defined borders */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 0, 0, 0.3);
+}
+
+.portfoliotitle {
+  font-size: 1.5rem;
+  margin: .5rem;
+  color: white;
+}
+.links ul {
     margin: 0;
-    
-    /* The CSS padding properties are used to generate space around an element's content, inside of any defined borders. */
     padding: 0;
-    
-    /* The overflow property specifies what should happen if content overflows an element's box. */
-    overflow: hidden;
-    
-    /*  */
-    background-color: rgb(255, 0, 0, 0.3);
+    display: flex;
 }
-/* The <li> tag is used inside ordered lists(<ol>), unordered lists (<ul>), and in menu lists (<menu>). */
+
 li {
-    /* The float property is used for positioning and formatting content e.g. let an image float left to the text in a container. */
-    float: left;
+    list-style: none;
 }
-/* The <a> tag defines a hyperlink, which is used to link from one page to another. */
+
 li a {
-    /* The display property specifies the display behavior (the type of rendering box) of an element. */
     display: block;
-    
-    /*  */
     color: white;
-    
-    /* The text-align property specifies the horizontal alignment of text in an element. */
     text-align: center;
-    
-    /* The CSS padding properties are used to generate space around an element's content, inside of any defined borders. */
-    padding: 14px 16px;
-    
-    /* The text-decoration property specifies the decoration added to text */
+    padding: 1rem;
     text-decoration: none;
-}
-/* The :hover selector is used to select elements when you mouse over them. */
-li a:hover {
-    /*  */
-    background-color: rgba(214, 68, 68, 0.7);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 110%;
 }
 
 li a .active {
     /*  */
     background-color: #111;
+}
+
+.links li:hover{
+background-color: black;
+}
+
+.burgertoggle {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31px;
+  height: 21px;
+}
+
+.burgertoggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 1000px){
+  .burgertoggle {
+    display: flex;
+  }
+  .links {
+    display: none;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .links ul {
+    flex-direction: column;
+  }
 }
 
 .flex-container {
