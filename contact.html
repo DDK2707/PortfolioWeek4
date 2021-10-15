@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Contact Me</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body
@@ -20,16 +21,20 @@ style="background-image: url(/Images/ravencontact.jpg);background-size: cover;">
 
 <h1 class="heading">Contact Ya Boi</h1> 
 <p style="font-size: 130%; color: white;">Shoot me a message if you want me to read and post your writing, or if you just want to say hi. I don't bite...hard</p> 
+
+
 <form action="mailto:angryturnip98@gmail.com" method="POST">
+    <div class="form">
     <fieldset style="color: white;">
         <legend>Your Info</legend>
         <label for="enter your name"> Name:</label><br>
         <input type="text" id="Name" name="Name" placeholder="John Doe" autofocus><br>
         <label for="enter telephone number"> Telephone:</label><br>
-        <input type="tel" id="Telephone" name="Telephone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+        <input type="tel" id="Telephone" name="Telephone" placeholder="123-456-7890" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"><br>
         <label for="enter email address">E-mail Address</label><br>
         <input type="email" id="E-mail" name="E-mail" placeholder="example@email.com" multiple required><br>
     </fieldset>
+
     <fieldset style="color: white;">
         <legend>Your Message</legend>
         <label for="enter message"></label><br>
@@ -41,6 +46,8 @@ style="background-image: url(/Images/ravencontact.jpg);background-size: cover;">
         <label for="no"> Hell Naw</label> <br>
     </fieldset>
     <input type="submit" value="Submit">
+</div>
 </form>
+
 </body>
 </html>
